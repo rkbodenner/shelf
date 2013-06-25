@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shelf: Your games</title>
+  </head>
+
+  <body>
+    <div id="shelfapp">
+      <form>
+        <input type="text" id="new-game" placeholder="Name of the game" />
+      </form>
+
+      <div id="main">
+        <ul id="game-list"></ul>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="scripts/json2.js"></script>
+    <script type="text/javascript" src="scripts/jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="scripts/underscore-1.4.4.js"></script>
+    <script type="text/javascript" src="scripts/backbone-1.0.0.js"></script>
+    <script type="text/javascript" src="scripts/backbone.localStorage-1.1.5.js"></script>
+    <script type="text/javascript" src="scripts/shelf.js"></script>
+
+    <script type="text/template" id="game-template">
+      <div class="view">
+        <label><%- name %></label>
+        <a class="destroy">x</a>
+      </div>
+      <input class="edit" type="text" value="<%- name %>" />
+    </script>
+
+  </body>
+
+</html>
